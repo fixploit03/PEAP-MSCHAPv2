@@ -13,7 +13,7 @@ sudo apt-get update
 sudo apt-get install hostapd-wpe openssl git iw xterm mdk4 aircrack-ng
 git clone https://github.com/fixploit03/PEAP-MSCHAPv2.git
 cd PEAP-MSCHAPv2/src
-chomod +x *
+chmod +x *
 ```
 
 ## Cara Menggunakan
