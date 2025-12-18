@@ -1,21 +1,24 @@
 #!/bin/bash
-#-------------------------------------------------------------------------
+#-------------------------------------------------------------------------------------------
 #
-# Script Bash sederhana untuk bikin sertifikat digital X.509 (self-signed)
-# yang digunakan dalam simulasi serangan terhadap EAP-PEAP (PEAP-MSCHAPv2)
+# Script Bash sederhana untuk membuat sertifikat digital X.509 (self-signed) yang digunakan
+# dalam simulasi serangan pada jaringan Wi-Fi WPA/WPA2-Enterprise (802.1X) yang menggunakan 
+# metode autentikasi EAP-PEAP (PEAP-MSCHAPv2).
 #
 # For educational purposes only!
 #
-#-------------------------------------------------------------------------
+#-------------------------------------------------------------------------------------------
 # Dibuat oleh: Rofi (Fixploit03)
 
 function banner(){
         echo ""
-        echo "+--------------------------------------------------------------------------+"
-        echo "|                                                                          |"
-        echo "| Script Bash sederhana untuk bikin sertifikat digital X.509 (self-signed) |"
-        echo "|                                                                          |"
-        echo "+--------------------------------------------------------------------------+"
+        echo "+-------------------------------------------------------------------------------------------+"
+        echo "|                                                                                           |"
+        echo "| Script Bash sederhana untuk membuat sertifikat digital X.509 (self-signed) yang digunakan |"
+        echo "| dalam simulasi serangan pada jaringan Wi-Fi WPA/WPA2-Enterprise (802.1X) yang menggunakan |"
+        echo "| metode autentikasi EAP-PEAP (PEAP-MSCHAPv2).                                              |"
+        echo "|                                                                                           |"
+        echo "+-------------------------------------------------------------------------------------------+"
         echo ""
         echo "Daftar ukuran kunci RSA yang tersedia:"
         echo ""
