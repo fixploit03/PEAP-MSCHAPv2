@@ -26,7 +26,7 @@ chmod +x *
 2. Jalankan script utama:
 
    ```
-   ./run.sh
+   sudo ./run.sh
    ```
 3. Restore network:
 
