@@ -1,5 +1,5 @@
 # PEAP-MSCHAPv2
-Script Bash sederhana untuk simulasi serangan pada Wi-Fi WPA/WPA2-Enterprise (802.1X) yang menggunakan metode EAP-PEAP (PEAP-MSCHAPv2).
+Script Bash sederhana untuk melakukan simulasi serangan pada jaringan Wi-Fi WPA/WPA2-Enterprise (802.1X) yang menggunakan metode autentikasi EAP-PEAP (PEAP-MSCHAPv2).
 
 > [!WARNING]
 > ## Disclaimer
