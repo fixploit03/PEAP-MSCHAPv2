@@ -17,7 +17,6 @@ chmod +x *
 ```
 
 ## Cara Menggunakan
-
 1. Bikin sertifikat palsu Self-Signed:
 
    ```
@@ -46,7 +45,12 @@ chmod +x *
    ```
 
 ## Screeshot
+![](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/img/proses.png)
+
+<p align="center">[ Gambar 1 - Penangkapan inner method MSCHAPv2 ]</p>
 
 ![](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/img/hasil.png)
+
+<p align="center">[ Gambar 2 - Hasil penangkapan inner method MSCHAPv2 ]</p>
 
 Semoga bermanfaat ^_^
