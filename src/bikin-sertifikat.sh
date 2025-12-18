@@ -1,6 +1,4 @@
 #!/bin/bash
-#
-# bikin-sertifikat.sh
 #-------------------------------------------------------------------------
 #
 # Script Bash sederhana untuk bikin sertifikat digital X.509 (self-signed)
@@ -11,17 +9,13 @@
 #-------------------------------------------------------------------------
 # Dibuat oleh: Rofi (Fixploit03)
 
-
-function keyboard_interrupt() {
-    echo -e "\n[-] Keluar dari script..."
-    exit 1
-}
-
 function banner(){
         echo ""
-        echo "------------------------------------------------------------------------"
-        echo "Script Bash sederhana untuk bikin sertifikat digital X.509 (self-signed)"
-        echo "------------------------------------------------------------------------"
+        echo "+--------------------------------------------------------------------------+"
+        echo "|                                                                          |"
+        echo "| Script Bash sederhana untuk bikin sertifikat digital X.509 (self-signed) |"
+        echo "|                                                                          |"
+        echo "+--------------------------------------------------------------------------+"
         echo ""
         echo "Daftar ukuran kunci RSA yang tersedia:"
         echo ""
@@ -186,7 +180,6 @@ function bikin_sertifikat(){
 }
 
 # Panggil semua fungsi
-trap keyboard_interrupt SIGINT
 banner
 input_data_sertifikat
 input_data_subject
