@@ -53,6 +53,10 @@ chmod +x *
 
 <p align="center">[ Gambar 2 - Hasil penangkapan inner method MSCHAPv2 ]</p>
 
+## Lisensi
+
+Proyek ini dirilis di bawah lisensi [MIT](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/LICENSE).
+
 ## Credits
 - Kali Linux - [https://www.kali.org](https://www.kali.org)
 - Hostapd-wpe - [https://github.com/OpenSecurityResearch/hostapd-wpe](https://github.com/OpenSecurityResearch/hostapd-wpe)
