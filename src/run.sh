@@ -83,7 +83,7 @@ function seting_mode_monitor(){
 
 function scan_target(){
         echo "[*] Melakukan scanning terhadap jaringan Wi-Fi WPA/WPA2-Enterprise yang ada di sekitar..."
-        echo "[*] Tekan CTRL+C untuk menghentikan proses scanning."
+        echo "[*] Tekan 'CTRL+C' untuk menghentikan proses scanning."
         sleep 5
         airodump-ng "${interface_deauth}"
 }
@@ -204,7 +204,7 @@ EOF
 
 function run(){
         echo "[*] Menjalankan serangan..."
-        echo "[*] Untuk menghentikannya ketikkan perintah 'sudo killall -9 xterm'."
+        echo "[*] Untuk menghentikan serangan, tekan 'CTRL+C' pada tab xterm."
         sleep 5
 
         # Running Deauth Attack
