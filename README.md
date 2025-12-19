@@ -44,7 +44,7 @@ chmod +x *
    systemctl restart NetworkManager
    ```
 
-## Screeshot
+## Screenshot
 ![](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/img/proses.png)
 
 <p align="center">[ Gambar 1 - Penangkapan inner method MSCHAPv2 ]</p>
