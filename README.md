@@ -58,12 +58,11 @@ chmod +x *
 Proyek ini dirilis di bawah lisensi [MIT](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/LICENSE).
 
 ## Credits
-- Kali Linux - [https://www.kali.org](https://www.kali.org)
 - Hostapd-wpe - [https://github.com/OpenSecurityResearch/hostapd-wpe](https://github.com/OpenSecurityResearch/hostapd-wpe)
 - OpenSSL - [https://www.openssl.org/](https://www.openssl.org/)
 - Aircrack-NG - [https://www.aircrack-ng.org](https://www.aircrack-ng.org)
 - MDK4 - [https://github.com/aircrack-ng/mdk4](https://github.com/aircrack-ng/mdk4)
 - XTerm - [https://github.com/xterm-x11](https://github.com/xterm-x11)
-- Git - [https://git-scm.com/](https://git-scm.com/)
-- iw - [https://git.kernel.org/pub/scm/linux/kernel/git/jberg/iw.git](https://git.kernel.org/pub/scm/linux/kernel/git/jberg/iw.git)
 - Fixploit03 - [https://github.com/fixploit03](https://github.com/fixploit03)
+
+Dan semua orang yang mungkin menggunakan atau berkontribusi dalam bentuk apa pun. Terima kasih!
