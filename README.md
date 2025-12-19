@@ -18,7 +18,7 @@ Script Bash sederhana untuk melakukan simulasi serangan pada jaringan Wi-Fi WPA/
 ## Instalasi
 ```
 sudo apt-get update
-sudo apt-get install hostapd-wpe openssl git iw xterm mdk4 aircrack-ng
+sudo apt-get install hostapd-wpe openssl git iw xterm aircrack-ng
 git clone https://github.com/fixploit03/PEAP-MSCHAPv2.git
 cd PEAP-MSCHAPv2/src
 chmod +x *
@@ -69,7 +69,6 @@ Proyek ini dirilis di bawah lisensi [MIT](https://github.com/fixploit03/PEAP-MSC
 - Hostapd-wpe - [https://github.com/OpenSecurityResearch/hostapd-wpe](https://github.com/OpenSecurityResearch/hostapd-wpe)
 - OpenSSL - [https://www.openssl.org/](https://www.openssl.org/)
 - Aircrack-NG - [https://www.aircrack-ng.org](https://www.aircrack-ng.org)
-- MDK4 - [https://github.com/aircrack-ng/mdk4](https://github.com/aircrack-ng/mdk4)
 - XTerm - [https://github.com/xterm-x11](https://github.com/xterm-x11)
 - Fixploit03 - [https://github.com/fixploit03](https://github.com/fixploit03)
 
