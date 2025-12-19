@@ -83,7 +83,7 @@ function seting_mode_monitor(){
 
 function scan_target(){
         echo "[*] Melakukan scanning terhadap jaringan Wi-Fi WPA/WPA2-Enterprise yang ada di sekitar..."
-        echo "[*] Tekan 'CTRL+C' untuk menghentikan proses scanning."
+        echo "[*] Untuk menghentikan proses scanning, tekan 'CTRL+C."
         sleep 5
         airodump-ng "${interface_deauth}"
 }
