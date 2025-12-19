@@ -7,6 +7,14 @@ Script Bash sederhana untuk melakukan simulasi serangan pada jaringan Wi-Fi WPA/
 > 
 > Segala bentuk penyalahgunaan, aktivitas ilegal, atau penggunaan tanpa izin yang melanggar hukum sepenuhnya menjadi tanggung jawab pengguna. Penulis tidak bertanggung jawab atas kerusakan sistem, kehilangan data, atau konsekuensi hukum yang timbul akibat penggunaan script ini.
 
+## Persyaratan
+- Sistem operasi Linux
+- Hak akses root
+- Dua buah adapter Wi-Fi
+- Koneksi internet
+
+> Untuk adapter Wi-Fi harus support mode monitor dan mode AP.
+
 ## Instalasi
 ```
 sudo apt-get update
