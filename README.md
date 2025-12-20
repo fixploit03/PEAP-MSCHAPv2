@@ -30,6 +30,7 @@ PEAP-MSCHAPv2/
 ├── img/
 │   ├── crack hash (hashcat).png
 │   ├── crack hash (john).png
+│   ├── evil twin.png
 │   ├── hasil.png
 │   └── proses.png
 │
@@ -52,7 +53,7 @@ Fungsi script yang terdapat pada direktori `src/`:
 <p align="center">[ Gambar 1 - Ilustrasi Evil Twin Attack ]</p>
 
 1. Proses serangan dimulai saat penyerang menjalankan script `bikin-sertifikat.sh`. Script ini memanfaatkan `openssl` untuk menerbitkan sertifikat digital X.509 yang ditandatangani sendiri (self-signed), yang di dalamnya terdapat kunci privat dan publik dengan identitas organisasi palsu guna mengelabui target.
-1. Selanjutnya, penyerang menjalankan script `run.sh` menggunakan sertifikat tersebut untuk membangun Rogue AP menggunakan `hostapd-wpe`, dengan meniru SSID serta konfigurasi jaringan Wi-Fi WPA/WPA2-Enterprise target. Tahap berikutnya adalah penyerang melancarkan serangan deauthentication menggunakan `aireplay-ng` untuk memutuskan koneksi klien dari AP yang sah, sehingga memaksa klien tersebut terhubung ke Rogue AP yang telah disiapkan oleh si penyerang.
+1. Selanjutnya, penyerang menjalankan script `run.sh` menggunakan sertifikat tersebut untuk membangun Rogue AP menggunakan `hostapd-wpe`, dengan meniru SSID serta konfigurasi jaringan Wi-Fi WPA/WPA2-Enterprise target. Tahap berikutnya adalah penyerang melancarkan serangan deauthentication menggunakan `aireplay-ng` untuk memutuskan koneksi klien dari AP yang sah, sehingga memaksa klien tersebut terhubung ke Rogue AP yang telah disiapkan oleh penyerang.
 1. Jika klien melakukan autentikasi EAP-PEAP tanpa validasi sertifikat server, kredensial berupa username, challenge-response MSCHAPv2, dan hash NTLM akan tertangkap. Data tersebut kemudian dapat di-crack secara offline menggunakan alat seperti `john` atau `hashcat` untuk mendapatkan kata sandi asli.
 
 ## 👨🏻‍💻 Cara Menggunakan
