@@ -86,11 +86,11 @@ Fungsi script yang terdapat pada direktori `src/`:
 ## 📸 Screenshot
 ![Gambar 1](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/img/proses.png)
 
-<p align="center">[ Gambar 1 - Penangkapan challenge-response MSCHAPv2 ]</p>
+<p align="center">[ Gambar 1 - Penangkapan challenge-response MSCHAPv2 dan hash NTLM ]</p>
 
 ![Gambar 2](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/img/hasil.png)
 
-<p align="center">[ Gambar 2 - Hasil penangkapan challenge-response MSCHAPv2 ]</p>
+<p align="center">[ Gambar 2 - Hasil penangkapan challenge-response MSCHAPv2 dan hash NTLM ]</p>
 
 ![Gambar 3](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/img/crack%20hash%20(john).png)
 
