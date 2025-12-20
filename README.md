@@ -45,6 +45,14 @@ Fungsi script yang terdapat pada direktori `src/`:
 - `bikin-sertifikat.sh`: Membuat sertifikat self-signed palsu yang nantinya digunakan oleh Rogue AP.
 - `run.sh`: Menangkap challenge‑response MSCHAPv2 dan hash NTLM.
 
+## Cara Kerja
+
+![](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/img/evil%20twin.png)
+
+1. Alur kerja serangan ini dimulai dengan penggunaan script `bikin-sertifikat.sh` untuk menghasilkan sertifikat digital X.509 self-signed melalui `openssl`. Sertifikat ini berisi private dan public key dengan identitas organisasi palsu.
+1. Selanjutnya, script `run.sh` memanfaatkan sertifikat tersebut untuk membangun Rogue AP menggunakan `hostapd-wpe` yang meniru SSID serta konfigurasi jaringan Wi-Fi WPA/WPA2-Enterprise target. Kemudian serangan deauthentication dilakukan menggunakan `aireplay-ng` untuk memutus koneksi klien dari AP asli dan memaksa klien tersebut terhubung ke Rogue AP.
+1. Jika klien melakukan autentikasi EAP-PEAP tanpa validasi sertifikat server, kredensial berupa username, challenge-response MSCHAPv2, dan hash NTLM akan tertangkap. Data tersebut kemudian dapat di-crack secara offline menggunakan alat seperti `john` atau `hashcat` untuk mendapatkan kata sandi asli.
+
 ## 👨🏻‍💻 Cara Menggunakan
 
 > [!NOTE]
