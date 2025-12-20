@@ -45,7 +45,7 @@ Fungsi script yang terdapat pada direktori `src/`:
 - `bikin-sertifikat.sh`: Membuat sertifikat self-signed palsu yang nantinya digunakan oleh Rogue AP.
 - `run.sh`: Menangkap challenge‑response MSCHAPv2 dan hash NTLM.
 
-## Cara Kerja
+## 🏗️ Cara Kerja
 
 ![Gambar 1](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/img/evil%20twin.png)
 
@@ -113,6 +113,12 @@ Fungsi script yang terdapat pada direktori `src/`:
 ![Gambar 5](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/img/crack%20hash%20(hashcat).png)
 
 <p align="center">[ Gambar 5 - Crack challenge-response MSCHAPv2 menggunakan Hashcat ]</p>
+
+## 🛡️ Mitigasi
+- Aktifkan validasi sertifikat server pada perangkat klien dan pastikan hanya menerima sertifikat dari Certificate Authority (CA) terpercaya.
+- Pertimbangkan menggunakan metode autentikasi yang lebih aman seperti EAP-TLS yang memerlukan sertifikat klien.
+- Terapkan kebijakan password yang kuat (minimal 12 karakter, kompleks) untuk autentikasi.
+- Implementasikan Wireless Intrusion Detection System (WIDS) untuk mendeteksi Rogue AP dan serangan deauthentication.
 
 ## 📜 Lisensi
 
