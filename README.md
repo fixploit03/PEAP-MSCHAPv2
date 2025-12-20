@@ -55,11 +55,19 @@ chmod +x *
 ## Screenshot
 ![](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/img/proses.png)
 
-<p align="center">[ Gambar 1 - Penangkapan inner method MSCHAPv2 ]</p>
+<p align="center">[ Gambar 1 - Penangkapan challenge-response MSCHAPv2 ]</p>
 
 ![](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/img/hasil.png)
 
-<p align="center">[ Gambar 2 - Hasil penangkapan inner method MSCHAPv2 ]</p>
+<p align="center">[ Gambar 2 - Hasil penangkapan challenge-response MSCHAPv2 ]</p>
+
+![](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/img/crack%20hash%20(john).png)
+
+<p align="center">[ Gambar 3 - Crack challenge-response MSCHAPv2 menggunakan John the Ripper ]</p>
+
+![](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/img/crack%20hash%20(hashcat).png)
+
+<p align="center">[ Gambar 4 - Crack challenge-response MSCHAPv2 menggunakan Hashcat ]</p>
 
 ## Lisensi
 
@@ -69,6 +77,8 @@ Proyek ini dirilis di bawah lisensi [MIT](https://github.com/fixploit03/PEAP-MSC
 - Hostapd-wpe - [https://github.com/OpenSecurityResearch/hostapd-wpe](https://github.com/OpenSecurityResearch/hostapd-wpe)
 - OpenSSL - [https://www.openssl.org/](https://www.openssl.org/)
 - Aircrack-NG - [https://www.aircrack-ng.org](https://www.aircrack-ng.org)
+- John the Ripper - [https://www.openwall.com/john](https://www.openwall.com/john)
+- Hashcat - [https://hashcat.net/hashcat/](https://hashcat.net/hashcat/)
 - XTerm - [https://github.com/xterm-x11](https://github.com/xterm-x11)
 - Fixploit03 - [https://github.com/fixploit03](https://github.com/fixploit03)
 
