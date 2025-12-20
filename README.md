@@ -53,19 +53,19 @@ chmod +x *
    ```
 
 ## Screenshot
-![](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/img/proses.png)
+![Gambar 1](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/img/proses.png)
 
 <p align="center">[ Gambar 1 - Penangkapan challenge-response MSCHAPv2 ]</p>
 
-![](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/img/hasil.png)
+![Gambar 2](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/img/hasil.png)
 
 <p align="center">[ Gambar 2 - Hasil penangkapan challenge-response MSCHAPv2 ]</p>
 
-![](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/img/crack%20hash%20(john).png)
+![Gambar 3](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/img/crack%20hash%20(john).png)
 
 <p align="center">[ Gambar 3 - Crack challenge-response MSCHAPv2 menggunakan John the Ripper ]</p>
 
-![](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/img/crack%20hash%20(hashcat).png)
+![Gambar 4](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/img/crack%20hash%20(hashcat).png)
 
 <p align="center">[ Gambar 4 - Crack challenge-response MSCHAPv2 menggunakan Hashcat ]</p>
 
