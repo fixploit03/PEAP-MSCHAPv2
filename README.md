@@ -47,10 +47,12 @@ Fungsi script yang terdapat pada direktori `src/`:
 
 ## Cara Kerja
 
-![](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/img/evil%20twin.png)
+![Gambar 1](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/img/evil%20twin.png)
 
-1. Alur kerja serangan ini dimulai dengan penggunaan script `bikin-sertifikat.sh` untuk menghasilkan sertifikat digital X.509 self-signed melalui `openssl`. Sertifikat ini berisi private dan public key dengan identitas organisasi palsu.
-1. Selanjutnya, script `run.sh` memanfaatkan sertifikat tersebut untuk membangun Rogue AP menggunakan `hostapd-wpe` yang meniru SSID serta konfigurasi jaringan Wi-Fi WPA/WPA2-Enterprise target. Kemudian serangan deauthentication dilakukan menggunakan `aireplay-ng` untuk memutus koneksi klien dari AP asli dan memaksa klien tersebut terhubung ke Rogue AP.
+<p align="center">[ Gambar 1 - Ilustrasi Evil Twin Attack ]</p>
+
+1. Proses serangan dimulai saat penyerang menjalankan script `bikin-sertifikat.sh`. Script ini memanfaatkan `openssl` untuk menerbitkan sertifikat digital X.509 yang ditandatangani sendiri (self-signed), yang di dalamnya terdapat kunci privat dan publik dengan identitas organisasi palsu guna mengelabui target.
+1. Selanjutnya, penyerang menjalankan script `run.sh` menggunakan sertifikat tersebut untuk membangun Rogue AP menggunakan `hostapd-wpe`, dengan meniru SSID serta konfigurasi jaringan Wi-Fi WPA/WPA2-Enterprise target. Tahap berikutnya adalah penyerang melancarkan serangan deauthentication menggunakan `aireplay-ng` untuk memutuskan koneksi klien dari AP yang sah, sehingga memaksa klien tersebut terhubung ke Rogue AP yang telah disiapkan oleh si penyerang.
 1. Jika klien melakukan autentikasi EAP-PEAP tanpa validasi sertifikat server, kredensial berupa username, challenge-response MSCHAPv2, dan hash NTLM akan tertangkap. Data tersebut kemudian dapat di-crack secara offline menggunakan alat seperti `john` atau `hashcat` untuk mendapatkan kata sandi asli.
 
 ## 👨🏻‍💻 Cara Menggunakan
@@ -96,21 +98,21 @@ Fungsi script yang terdapat pada direktori `src/`:
    ```
 
 ## 📸 Screenshot
-![Gambar 1](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/img/proses.png)
+![Gambar 2](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/img/proses.png)
 
-<p align="center">[ Gambar 1 - Penangkapan challenge-response MSCHAPv2 dan hash NTLM ]</p>
+<p align="center">[ Gambar 2 - Penangkapan challenge-response MSCHAPv2 dan hash NTLM ]</p>
 
-![Gambar 2](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/img/hasil.png)
+![Gambar 3](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/img/hasil.png)
 
-<p align="center">[ Gambar 2 - Hasil penangkapan challenge-response MSCHAPv2 dan hash NTLM ]</p>
+<p align="center">[ Gambar 3 - Hasil penangkapan challenge-response MSCHAPv2 dan hash NTLM ]</p>
 
-![Gambar 3](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/img/crack%20hash%20(john).png)
+![Gambar 4](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/img/crack%20hash%20(john).png)
 
-<p align="center">[ Gambar 3 - Crack challenge-response MSCHAPv2 menggunakan John the Ripper ]</p>
+<p align="center">[ Gambar 4 - Crack challenge-response MSCHAPv2 menggunakan John the Ripper ]</p>
 
-![Gambar 4](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/img/crack%20hash%20(hashcat).png)
+![Gambar 5](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/img/crack%20hash%20(hashcat).png)
 
-<p align="center">[ Gambar 4 - Crack challenge-response MSCHAPv2 menggunakan Hashcat ]</p>
+<p align="center">[ Gambar 5 - Crack challenge-response MSCHAPv2 menggunakan Hashcat ]</p>
 
 ## 📜 Lisensi
 
