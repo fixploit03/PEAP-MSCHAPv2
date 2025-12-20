@@ -7,7 +7,7 @@ Script Bash sederhana untuk melakukan simulasi serangan pada jaringan Wi-Fi WPA/
 > 
 > Segala bentuk penyalahgunaan, aktivitas ilegal, atau penggunaan tanpa izin yang melanggar hukum sepenuhnya menjadi tanggung jawab pengguna. Penulis tidak bertanggung jawab atas kerusakan sistem, kehilangan data, atau konsekuensi hukum yang timbul akibat penggunaan script ini.
 
-## Persyaratan
+## 📋 Persyaratan
 - Sistem operasi Linux
 - Hak akses root
 - Dua buah adapter Wi-Fi
@@ -15,7 +15,7 @@ Script Bash sederhana untuk melakukan simulasi serangan pada jaringan Wi-Fi WPA/
 
 > Untuk adapter Wi-Fi harus support mode monitor dan mode AP.
 
-## Instalasi
+## 🔧 Instalasi
 ```
 sudo apt-get update
 sudo apt-get install hostapd-wpe openssl git iw xterm aircrack-ng
@@ -24,7 +24,28 @@ cd PEAP-MSCHAPv2/src
 chmod +x *
 ```
 
-## Cara Menggunakan
+## 📂 Struktur Proyek
+```
+PEAP-MSCHAPv2/
+├── img/
+│   ├── crack hash (hashcat).png
+│   ├── crack hash (john).png
+│   ├── hasil.png
+│   └── proses.png
+│
+├── src/                    
+│   ├── bikin-sertifikat.sh  
+│   └── run.sh            
+│
+├── LICENSE
+└── README.md
+```
+
+Fungsi script yang terdapat pada direktori `src/`:
+- `bikin-sertifikat.sh`: Membuat sertifikat self-signed palsu yang digunakan oleh Rogue AP.
+- `run.sh`: Menangkap challenge‑response MSCHAPv2 serta hash NTLM.
+
+## 👨🏻‍💻 Cara Menggunakan
 1. Bikin sertifikat palsu (self-signed):
 
    ```
@@ -62,7 +83,7 @@ chmod +x *
    systemctl restart NetworkManager
    ```
 
-## Screenshot
+## 📸 Screenshot
 ![Gambar 1](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/img/proses.png)
 
 <p align="center">[ Gambar 1 - Penangkapan challenge-response MSCHAPv2 ]</p>
@@ -79,11 +100,11 @@ chmod +x *
 
 <p align="center">[ Gambar 4 - Crack challenge-response MSCHAPv2 menggunakan Hashcat ]</p>
 
-## Lisensi
+## 📜 Lisensi
 
 Proyek ini dirilis di bawah lisensi [MIT](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/LICENSE).
 
-## Credits
+## © Credits
 - Hostapd-wpe - [https://github.com/OpenSecurityResearch/hostapd-wpe](https://github.com/OpenSecurityResearch/hostapd-wpe)
 - OpenSSL - [https://www.openssl.org/](https://www.openssl.org/)
 - Aircrack-NG - [https://www.aircrack-ng.org](https://www.aircrack-ng.org)
