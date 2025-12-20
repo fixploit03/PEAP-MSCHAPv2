@@ -25,17 +25,27 @@ chmod +x *
 ```
 
 ## Cara Menggunakan
-1. Bikin sertifikat palsu Self-Signed:
+1. Bikin sertifikat palsu (self-signed):
 
    ```
    ./bikin-sertifikat.sh
    ```
-2. Jalankan script utama:
+1. Jalankan script utama:
 
    ```
    sudo ./run.sh
    ```
-3. Restore network:
+1. Crack hash NTLM:
+   ```
+   # Menggunakan John the Ripper
+   john --format=netntlm-naive [file_hash]
+
+   # Menggunakan Hashcat
+   hashcat -a 0 -m 5500 [file_hash] [file_wordlist]
+   ```
+
+   Jika ingin menggunakan wordlist di John the Ripper, gunakan opsi `--wordlist=[file_wordlist]`.
+1. Restore network:
 
    ```
    # Mengembalikan interface Rogue AP ke mode managed
