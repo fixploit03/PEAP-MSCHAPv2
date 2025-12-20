@@ -1,5 +1,5 @@
 # PEAP-MSCHAPv2
-Script Bash sederhana untuk melakukan simulasi serangan pada jaringan Wi-Fi WPA/WPA2-Enterprise (802.1X) yang menggunakan metode autentikasi EAP-PEAP (PEAP-MSCHAPv2).
+Script Bash sederhana yang dirancang untuk mensimulasikan serangan pada jaringan Wi-Fi WPA/WPA2-Enterprise (802.1X) dengan metode autentikasi EAP-PEAP (PEAP-MSCHAPv2).
 
 > [!WARNING]
 > ## Disclaimer
@@ -42,11 +42,11 @@ PEAP-MSCHAPv2/
 ```
 
 Fungsi script yang terdapat pada direktori `src/`:
-- `bikin-sertifikat.sh`: Membuat sertifikat self-signed palsu yang digunakan oleh Rogue AP.
-- `run.sh`: Menangkap challenge‑response MSCHAPv2 serta hash NTLM.
+- `bikin-sertifikat.sh`: Membuat sertifikat self-signed palsu yang nantinya digunakan oleh Rogue AP.
+- `run.sh`: Menangkap challenge‑response MSCHAPv2 dan hash NTLM.
 
 ## 👨🏻‍💻 Cara Menggunakan
-1. Bikin sertifikat palsu (self-signed):
+1. Buat sertifikat self-signed palsu:
 
    ```
    ./bikin-sertifikat.sh
