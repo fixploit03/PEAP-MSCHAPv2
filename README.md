@@ -46,6 +46,10 @@ Fungsi script yang terdapat pada direktori `src/`:
 - `run.sh`: Menangkap challenge‑response MSCHAPv2 dan hash NTLM.
 
 ## 👨🏻‍💻 Cara Menggunakan
+
+> [!NOTE]
+> Script ini hanya berfungsi jika pengguna tidak melakukan validasi terhadap sertifikat server.
+
 1. Buat sertifikat self-signed palsu:
 
    ```
