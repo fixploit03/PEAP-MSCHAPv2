@@ -44,7 +44,7 @@ PEAP-MSCHAPv2/
 
 Fungsi script yang terdapat pada direktori `src/`:
 - `bikin-sertifikat.sh`: Membuat sertifikat self-signed palsu yang nantinya digunakan oleh Rogue AP.
-- `run.sh`: Menangkap challenge‑response MSCHAPv2 dan hash NTLM.
+- `run.sh`: Menangkap username dan challenge‑response MSCHAPv2.
 
 ## 🏗️ Cara Kerja
 
@@ -54,7 +54,7 @@ Fungsi script yang terdapat pada direktori `src/`:
 
 1. Proses serangan dimulai saat penyerang menjalankan script `bikin-sertifikat.sh`. Script ini memanfaatkan `openssl` untuk menerbitkan sertifikat digital X.509 yang ditandatangani sendiri (self-signed), yang di dalamnya terdapat kunci privat dan publik dengan identitas organisasi palsu guna mengelabui target.
 1. Selanjutnya, penyerang menjalankan script `run.sh` menggunakan sertifikat tersebut untuk membangun Rogue AP menggunakan `hostapd-wpe`, dengan meniru SSID serta konfigurasi jaringan Wi-Fi WPA/WPA2-Enterprise target. Tahap berikutnya adalah penyerang melancarkan serangan deauthentication menggunakan `aireplay-ng` untuk memutuskan koneksi klien dari AP yang sah, sehingga memaksa klien tersebut terhubung ke Rogue AP yang telah disiapkan oleh penyerang.
-1. Jika klien melakukan autentikasi EAP-PEAP tanpa validasi sertifikat server, kredensial berupa username, challenge-response MSCHAPv2, dan hash NTLM akan tertangkap. Data tersebut kemudian dapat di-crack secara offline menggunakan alat seperti `john` atau `hashcat` untuk mendapatkan kata sandi asli.
+1. Jika klien melakukan autentikasi EAP-PEAP tanpa memverifikasi sertifikat server, maka kredensial autentikasi berupa username serta challenge–response MSCHAPv2 dapat disadap oleh penyerang. Data tersebut selanjutnya dapat di-crack secara offline menggunakan alat seperti `john` atau `hashcat` untuk mendapatkan kata sandi asli milik pengguna.
 
 ## 👨🏻‍💻 Cara Menggunakan
 
@@ -71,7 +71,7 @@ Fungsi script yang terdapat pada direktori `src/`:
    ```
    sudo ./run.sh
    ```
-1. Crack hash NTLM:
+1. Crack hash:
    ```
    # Menggunakan John the Ripper
    john --format=netntlm-naive [file_hash]
@@ -80,7 +80,7 @@ Fungsi script yang terdapat pada direktori `src/`:
    hashcat -a 0 -m 5500 [file_hash] [file_wordlist]
    ```
 
-   Jika ingin menggunakan wordlist di John the Ripper, gunakan opsi `--wordlist=[file_wordlist]`.
+   Jika ingin menggunakan wordlist kustom di John the Ripper, gunakan opsi `--wordlist=[file_wordlist]`.
 1. Restore network:
 
    ```
@@ -101,19 +101,19 @@ Fungsi script yang terdapat pada direktori `src/`:
 ## 📸 Screenshot
 ![Gambar 2](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/img/proses.png)
 
-<p align="center">[ Gambar 2 - Penangkapan challenge-response MSCHAPv2 dan hash NTLM ]</p>
+<p align="center">[ Gambar 2 - Penangkapan username dan challenge-response MSCHAPv2 ]</p>
 
 ![Gambar 3](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/img/hasil.png)
 
-<p align="center">[ Gambar 3 - Hasil penangkapan challenge-response MSCHAPv2 dan hash NTLM ]</p>
+<p align="center">[ Gambar 3 - Hasil penangkapan username dan challenge-response MSCHAPv2 ]</p>
 
 ![Gambar 4](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/img/crack%20hash%20(john).png)
 
-<p align="center">[ Gambar 4 - Crack challenge-response MSCHAPv2 menggunakan John the Ripper ]</p>
+<p align="center">[ Gambar 4 - Crack hash menggunakan John the Ripper ]</p>
 
 ![Gambar 5](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/img/crack%20hash%20(hashcat).png)
 
-<p align="center">[ Gambar 5 - Crack challenge-response MSCHAPv2 menggunakan Hashcat ]</p>
+<p align="center">[ Gambar 5 - Crack hash menggunakan Hashcat ]</p>
 
 ## 🛡️ Mitigasi
 - Aktifkan validasi sertifikat server pada perangkat klien dan pastikan hanya menerima sertifikat dari Certificate Authority (CA) terpercaya.
