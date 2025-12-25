@@ -1,5 +1,5 @@
 # PEAP-MSCHAPv2
-Script Bash sederhana yang dirancang untuk mensimulasikan serangan pada jaringan Wi-Fi WPA/WPA2-Enterprise (802.1X) dengan metode autentikasi EAP-PEAP (PEAP-MSCHAPv2).
+Script Bash sederhana yang dirancang untuk melakukan simulasi serangan pada jaringan Wi-Fi WPA/WPA2-Enterprise (802.1X) yang menggunakan metode autentikasi EAP-PEAP (PEAP-MSCHAPv2).
 
 > [!WARNING]
 > ## Disclaimer
@@ -71,7 +71,7 @@ Fungsi script yang terdapat pada direktori `src/`:
    ```
    sudo ./run.sh
    ```
-1. Crack hash:
+1. Crack challenge-response MSCHAPv2:
    ```
    # Menggunakan John the Ripper
    john --format=netntlm-naive [file_hash]
@@ -109,11 +109,11 @@ Fungsi script yang terdapat pada direktori `src/`:
 
 ![Gambar 4](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/img/crack%20hash%20(john).png)
 
-<p align="center">[ Gambar 4 - Crack hash menggunakan John the Ripper ]</p>
+<p align="center">[ Gambar 4 - Crack challenge-response MSCHAPv2 menggunakan John the Ripper ]</p>
 
 ![Gambar 5](https://github.com/fixploit03/PEAP-MSCHAPv2/blob/main/img/crack%20hash%20(hashcat).png)
 
-<p align="center">[ Gambar 5 - Crack hash menggunakan Hashcat ]</p>
+<p align="center">[ Gambar 5 - Crack challenge-response MSCHAPv2 menggunakan Hashcat ]</p>
 
 ## 🛡️ Mitigasi
 - Aktifkan validasi sertifikat server pada perangkat klien dan pastikan hanya menerima sertifikat dari Certificate Authority (CA) terpercaya.
