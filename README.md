@@ -85,17 +85,17 @@ Fungsi script yang terdapat pada direktori `src/`:
 
    ```
    # Mengembalikan interface Rogue AP ke mode managed
-   ip link set [interface_rogue] down
-   iw dev [interface_rogue] set type managed
-   ip link set [interface_rogue] up
+   sudo ip link set [interface_rogue] down
+   sudo iw dev [interface_rogue] set type managed
+   sudo ip link set [interface_rogue] up
 
    # Mengembalikan interface deauthentication ke mode managed
-   ip link set [interface_deauth] down
-   iw dev [interface_deauth] set type managed
-   ip link set [interface_deauth] up
+   sudo ip link set [interface_deauth] down
+   sudo iw dev [interface_deauth] set type managed
+   sudo ip link set [interface_deauth] up
 
    # Merestart NetworkManager agar konfigurasi jaringan kembali normal
-   systemctl restart NetworkManager
+   sudo systemctl restart NetworkManager
    ```
 
 ## 📸 Screenshot
