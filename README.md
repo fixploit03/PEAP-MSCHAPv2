@@ -74,7 +74,7 @@ Fungsi script yang terdapat pada direktori `src/`:
 1. Crack challenge-response MSCHAPv2:
    ```
    # Menggunakan John the Ripper
-   john --format=netntlm-naive [file_hash]
+   john --format=netntlm [file_hash]
 
    # Menggunakan Hashcat
    hashcat -a 0 -m 5500 [file_hash] [file_wordlist]
