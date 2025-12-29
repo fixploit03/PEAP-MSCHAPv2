@@ -74,6 +74,9 @@ function seting_mode_monitor(){
         # Mengaktifkan mode monitor
         echo "[*] Mengaktifkan mode monitor pada interface '${interface_deauth}'..."
         if airmon-ng start "${interface_deauth}"; then
+                if iw dev | grep -wq "${interface_deauth}mon"; then
+                        interface_deauth="${interface_deauth}mon"
+                fi
                 echo -e "\n[+] Berhasil mengaktifkan monitor pada interface '${interface_deauth}'."
         else
                 echo -e "\n[-] Gagal mengaktifkan monitor pada interface '${interface_deauth}'."
