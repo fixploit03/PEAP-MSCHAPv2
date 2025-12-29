@@ -179,10 +179,10 @@ function seting_konfigurasi_file(){
 }
 
 function bikin_file_konfigurasi(){
-        output_file="hostapd-wpe.conf"
-        echo "[*] Membuat file konfigurasi '${output_file}'..."
+        file_konfigurasi="hostapd-wpe.conf"
+        echo "[*] Membuat file konfigurasi '${file_konfigurasi}'..."
 
-        cat << EOF > "${output_file}"
+        cat << EOF > "${file_konfigurasi}"
 # Interface Wi-Fi yang digunakan untuk membuat Rogue AP
 interface=${interface_rogue}
 #
@@ -226,7 +226,7 @@ server_cert=${sertifikat_server}
 # Parameter Diffie-Hellman untuk pertukaran kunci TLS
 dh_file=/etc/hostapd-wpe/certs/dh
 EOF
-        echo "[+] Berhasil membuat file konfigurasi '${output_file}'."
+        echo "[+] Berhasil membuat file konfigurasi '${file_konfigurasi}'."
 }
 
 function run(){
@@ -240,7 +240,7 @@ function run(){
 
         # Running Rogue AP
         echo "[*] Menjalankan Rogue AP menggunakan hostapd-wpe..."
-        xterm -T "Rogue AP (hostapd-wpe)" -geometry 90x30+0+0 -e "hostapd-wpe ${output_file}" &
+        xterm -T "Rogue AP (hostapd-wpe)" -geometry 90x30+0+0 -e "hostapd-wpe ${file_konfigurasi}" &
 }
 
 # Panggil semua fungsi
